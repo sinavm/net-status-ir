@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-09-25T04:23:55.907544+00:00",
+  "probe": "github-actions",
+  "results": [
+    {
+      "id": "github",
+      "name": "GitHub",
+      "url": "https://github.com",
+      "ok": true,
+      "status": 200,
+      "ms": 45,
+      "error": null
+    },
+    {
+      "id": "raw",
+      "name": "GitHub Raw",
+      "url": "https://raw.githubusercontent.com/sinavm/SVM/main/README.md",
+      "ok": true,
+      "status": 200,
+      "ms": 162,
+      "error": null
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "url": "https://www.wikipedia.org",
+      "ok": true,
+      "status": 200,
+      "ms": 118,
+      "error": null
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "url": "https://www.cloudflare.com",
+      "ok": true,
+      "status": 200,
+      "ms": 138,
+      "error": null
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "url": "https://www.google.com",
+      "ok": true,
+      "status": 200,
+      "ms": 89,
+      "error": null
+    }
+  ]
+}
