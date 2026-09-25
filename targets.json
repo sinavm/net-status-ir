@@ -1,0 +1,9 @@
+{
+  "targets": [
+    {"id": "github", "url": "https://github.com", "name": "GitHub"},
+    {"id": "raw", "url": "https://raw.githubusercontent.com/sinavm/SVM/main/README.md", "name": "GitHub Raw"},
+    {"id": "wikipedia", "url": "https://www.wikipedia.org", "name": "Wikipedia"},
+    {"id": "cloudflare", "url": "https://www.cloudflare.com", "name": "Cloudflare"},
+    {"id": "google", "url": "https://www.google.com", "name": "Google"}
+  ]
+}
