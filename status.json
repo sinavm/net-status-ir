@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-16T18:55:52.352259+00:00",
+  "checked_at": "2026-10-16T21:58:06.018989+00:00",
   "probe": "github-actions",
   "results": [
     {
@@ -8,7 +8,7 @@
       "url": "https://github.com",
       "ok": true,
       "status": 200,
-      "ms": 118,
+      "ms": 75,
       "error": null
     },
     {
@@ -17,7 +17,7 @@
       "url": "https://raw.githubusercontent.com/sinavm/SVM/main/README.md",
       "ok": true,
       "status": 200,
-      "ms": 146,
+      "ms": 202,
       "error": null
     },
     {
@@ -26,7 +26,7 @@
       "url": "https://www.wikipedia.org",
       "ok": true,
       "status": 200,
-      "ms": 78,
+      "ms": 15,
       "error": null
     },
     {
@@ -35,7 +35,7 @@
       "url": "https://www.cloudflare.com",
       "ok": true,
       "status": 200,
-      "ms": 139,
+      "ms": 136,
       "error": null
     },
     {
@@ -44,7 +44,7 @@
       "url": "https://www.google.com",
       "ok": true,
       "status": 200,
-      "ms": 107,
+      "ms": 72,
       "error": null
     }
   ]
