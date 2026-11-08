@@ -5,49 +5,14 @@ on:
     - cron: "*/30 * * * *"
   push:
     branches: [main]
-
 permissions:
   contents: write
-
-concurrency:
-  group: endpoint-status-main
-  cancel-in-progress: false
-
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - run: python3 check.py
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          fetch-depth: 0
-
-      - name: Refresh and push endpoint status
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          for attempt in 1 2 3 4 5; do
-            echo "Attempt $attempt: syncing with origin/main"
-            git fetch origin main
-            git reset --hard origin/main
-
-            python3 check.py
-            git add index.html status.json
-
-            if git diff --cached --quiet; then
-              echo "No status changes to commit."
-              exit 0
-            fi
-
-            git commit -m "chore: refresh endpoint status"
-
-            if git push origin HEAD:main; then
-              echo "Status update pushed successfully."
-              exit 0
-            fi
-
-            echo "Push was rejected; the next attempt will fetch the latest main and regenerate status."
-          done
-
-          echo "Could not push status after 5 attempts."
-          exit 1
+          commit_message: "chore: refresh endpoint status"
