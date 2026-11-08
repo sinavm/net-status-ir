@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-08T12:02:08.685850+00:00",
+  "checked_at": "2026-11-08T12:17:39.234818+00:00",
   "probe": "github-actions",
   "results": [
     {
@@ -8,8 +8,8 @@
       "url": "https://github.com",
       "ok": false,
       "status": null,
-      "ms": 15126,
-      "error": "The read operation timed out"
+      "ms": 22,
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "id": "raw",
@@ -17,7 +17,7 @@
       "url": "https://raw.githubusercontent.com/sinavm/SVM/main/README.md",
       "ok": true,
       "status": 200,
-      "ms": 131,
+      "ms": 16,
       "error": null
     },
     {
@@ -26,7 +26,7 @@
       "url": "https://www.wikipedia.org",
       "ok": true,
       "status": 200,
-      "ms": 119,
+      "ms": 12,
       "error": null
     },
     {
@@ -35,7 +35,7 @@
       "url": "https://www.cloudflare.com",
       "ok": true,
       "status": 200,
-      "ms": 290,
+      "ms": 40,
       "error": null
     },
     {
@@ -44,7 +44,7 @@
       "url": "https://www.google.com",
       "ok": true,
       "status": 200,
-      "ms": 72,
+      "ms": 54,
       "error": null
     }
   ]
