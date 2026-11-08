@@ -5,14 +5,38 @@ on:
     - cron: "*/30 * * * *"
   push:
     branches: [main]
+
 permissions:
   contents: write
+
+# Prevent two scheduled/manual runs from racing to update main.
+concurrency:
+  group: endpoint-status-main
+  cancel-in-progress: false
+
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - run: python3 check.py
-      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh endpoint status"
+          fetch-depth: 0
+
+      - name: Check endpoints
+        run: python3 check.py
+
+      - name: Commit and push as repository owner
+        run: |
+          git config user.name "sinavm"
+          git config user.email "163084137+sinavm@users.noreply.github.com"
+
+          git add index.html status.json
+          if git diff --cached --quiet; then
+            echo "No status changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: refresh endpoint status"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
