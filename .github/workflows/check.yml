@@ -5,31 +5,14 @@ on:
     - cron: "*/30 * * * *"
   push:
     branches: [main]
-
 permissions:
   contents: write
-
-concurrency:
-  group: endpoint-check-main
-  cancel-in-progress: false
-
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-
       - run: python3 check.py
-
-      # Bring the runner up to date before creating the automated commit.
-      # Autostash preserves the files changed by check.py during the rebase.
-      - name: Sync with latest main
-        run: |
-          git fetch origin main
-          git -c rebase.autoStash=true rebase origin/main
-
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh endpoint status"
