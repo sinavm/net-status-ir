@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-11-08T11:37:40.888957+00:00",
+  "checked_at": "2026-11-08T11:41:44.041160+00:00",
   "probe": "github-actions",
   "results": [
     {
       "id": "github",
       "name": "GitHub",
       "url": "https://github.com",
-      "ok": true,
-      "status": 200,
-      "ms": 40,
-      "error": null
+      "ok": false,
+      "status": null,
+      "ms": 21,
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "id": "raw",
@@ -17,7 +17,7 @@
       "url": "https://raw.githubusercontent.com/sinavm/SVM/main/README.md",
       "ok": true,
       "status": 200,
-      "ms": 144,
+      "ms": 47,
       "error": null
     },
     {
@@ -26,7 +26,7 @@
       "url": "https://www.wikipedia.org",
       "ok": true,
       "status": 200,
-      "ms": 221,
+      "ms": 18,
       "error": null
     },
     {
@@ -35,7 +35,7 @@
       "url": "https://www.cloudflare.com",
       "ok": true,
       "status": 200,
-      "ms": 124,
+      "ms": 37,
       "error": null
     },
     {
@@ -44,7 +44,7 @@
       "url": "https://www.google.com",
       "ok": true,
       "status": 200,
-      "ms": 94,
+      "ms": 48,
       "error": null
     }
   ]
